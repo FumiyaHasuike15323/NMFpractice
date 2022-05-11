@@ -4,7 +4,7 @@ function [Wmatrix, Hmatrix] = KLNMF(Xmatrix, K, numIterative) %Xmatrei: 観測�
 
 Wmatrix = rand(xSize, K); %分解後の行列W,Hの初期値
 Hmatrix = rand(K, ySize);
-
+oneMat = ones(xSize, ySize);
 
 ips = 10^(-21); %0割り回避のための数
 J = zeros(numIterative, 1); %コスト関数初期化
