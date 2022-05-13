@@ -5,7 +5,7 @@ K = 128;
 numIterative = 500;
 
 F = DGTtool;
-[inputWave, Fs] = audioread("music_piano.wav");
+[inputWave, Fs] = audioread("test1.wav");
 inputMat = abs(F(inputWave));
 
 % [W, H] = EuNMF(inputMat, K, numIterative);
@@ -13,4 +13,4 @@ inputMat = abs(F(inputWave));
 % [W, H] = ISNMF(inputMat, K, numIterative);
 
 outputWave = F.pinv(W * H);
-audiowrite("test_out.wav", outputWave / max(abs(outputWave)), Fs);
+audiowrite("test_out.wav", outputWave / max(outputWave, "all"), Fs);
