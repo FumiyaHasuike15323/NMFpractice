@@ -15,4 +15,4 @@ for i = 1 : numIterative
     J(i, 1) = (norm(Xmatrix - Wmatrix * Hmatrix)) ^ 2;
 end
 
-plot(J);
+% plot(J);

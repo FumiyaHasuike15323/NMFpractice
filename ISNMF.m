@@ -23,4 +23,4 @@ for i = 1 : numIterative
     J(i, 1) = sum(XperWH - log(XperWH + ips) - 1, "all");
 end
 
-plot(J);
+% plot(J);
