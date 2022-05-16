@@ -16,4 +16,4 @@ for i = 1 : numIterative
     J(i, 1) = sum((Xmatrix .* log((Xmatrix ./ (Wmatrix * Hmatrix + ips)) + ips) - (Xmatrix - (Wmatrix * Hmatrix))), "all");
 end
 
-plot(J);
+% plot(J);
